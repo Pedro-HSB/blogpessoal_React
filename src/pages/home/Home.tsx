@@ -1,6 +1,3 @@
-import { MouseEventHandler } from 'react';
-import { Link } from 'react-router-dom';
-import Popup from 'reactjs-popup';
 import ListaPostagens from '../../components/postagem/listaPostagem/ListarPostagens';
 import ModalPostam from '../../components/postagem/modalPostagem/ModalPostam';
 //import './Home.css'

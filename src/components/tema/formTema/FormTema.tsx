@@ -4,6 +4,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import Tema from "../../../models/Tema";
 import { atualizar, buscar, cadastrar } from "../../../services/Service";
 import { RotatingLines } from "react-loader-spinner";
+import { ToastAlert } from "../../../utils/ToastAlert";
 
 function FormTema() {
 
@@ -24,7 +25,7 @@ function FormTema() {
             })
         } catch (error: any) {
             if (error.toString().includes('403')) {
-                alert('O token Expirou!')
+                ToastAlert('O token Expirou!', "info")
                 handleLogout()
             }
         }
@@ -32,7 +33,7 @@ function FormTema() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado!')
+            ToastAlert('Você precisa estar logado!', "info")
             navigate('/login')
         }
     }, [token])
@@ -63,13 +64,13 @@ function FormTema() {
                 await atualizar(`/temas`, tema, setTema, {
                     headers: { 'Authorization': token }
                 })
-                alert('O Tema foi atualizado com sucesso!')
+                ToastAlert('O Tema foi atualizado com sucesso!', "sucesso")
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('O Token Expirou!')
+                    ToastAlert('O Token Expirou!', "info")
                     handleLogout();
                 } else {
-                    alert('Erro ao atualizar o tema.')
+                    ToastAlert('Erro ao atualizar o tema.', "erro")
                 }
 
             }
@@ -78,13 +79,13 @@ function FormTema() {
                 await cadastrar(`/temas`, tema, setTema, {
                     headers: { 'Authorization': token }
                 })
-                alert('O Tema foi cadastrado com sucesso!')
+                ToastAlert('O Tema foi cadastrado com sucesso!', "sucesso")
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('O Token Expirou!')
+                    ToastAlert('O Token Expirou!', "info")
                     handleLogout();
                 } else {
-                    alert('Erro ao cadastrar o tema.')
+                    ToastAlert('Erro ao cadastrar o tema.', "erro")
                 }
 
             }
