@@ -1,3 +1,9 @@
+import { MouseEventHandler } from 'react';
+import { Link } from 'react-router-dom';
+import Popup from 'reactjs-popup';
+import ListaPostagens from '../../components/postagem/listaPostagem/ListarPostagens';
+import ModalPostam from '../../components/postagem/modalPostagem/ModalPostam';
+//import './Home.css'
 
 function Home() {
 
@@ -11,9 +17,7 @@ function Home() {
                         <p className="text-xl">Expresse aqui os seus pensamentos e opiniões</p>
 
                         <div className="flex justify-around gap-4">
-                            <div className="rounded text-white border-white border-solid border-2 px-4 py-2">
-                                Nova Postagem
-                            </div>
+                            <ModalPostam />
                         </div>
                     </div>
 
@@ -26,6 +30,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <ListaPostagens/>
         </>
     )
 }
