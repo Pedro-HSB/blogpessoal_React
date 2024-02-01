@@ -3,7 +3,7 @@ import Popup from 'reactjs-popup';
 import FormPostagem from '../formPostagem/FormPostagem';
 import "reactjs-popup/dist/index.css"
 
-function ModalPostam() {
+function ModalPostagem() {
     return (
         <>
             <Popup
@@ -17,4 +17,4 @@ function ModalPostam() {
     )
 }
 
-export default ModalPostam
+export default ModalPostagem

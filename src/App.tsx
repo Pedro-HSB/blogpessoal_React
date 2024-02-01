@@ -14,6 +14,7 @@ import FormTema from './components/tema/formTema/FormTema'
 import DeletarTema from './components/tema/deletarTema/DeletarTema'
 import { ToastContainer } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
+import Perfil from './pages/perfil/Perfil'
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
               <Route path="/cadastrartema" element={<FormTema />} />
               <Route path="/editartema/:id" element={<FormTema />} />
               <Route path="/deletartema/:id" element={<DeletarTema />} />
+              <Route path="/perfil" element={<Perfil />} />
             </Routes>
           </div>
           <Footer />

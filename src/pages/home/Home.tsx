@@ -1,5 +1,5 @@
 import ListaPostagens from '../../components/postagem/listaPostagem/ListarPostagens';
-import ModalPostam from '../../components/postagem/modalPostagem/ModalPostam';
+import ModalPostam from '../../components/postagem/modalPostagem/ModalPostagem';
 //import './Home.css'
 
 function Home() {

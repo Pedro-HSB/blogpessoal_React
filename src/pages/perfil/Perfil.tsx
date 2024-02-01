@@ -17,15 +17,14 @@ const Perfil = () => {
     }, [usuario.token])
 
   return (
-    <div className='container mx-auto mt-4 rounded-2x1 overflow-hidden'>
-          <img src="https://i.imgur.com/ZZFAmzo.jpg" alt="Capa Do Perfil" className='w-full h-72 object-cover border-b-8 border-white'/>
-        <img src={usuario.foto} alt={`Foto De Perfil Do ${usuario.nome}`} className='w-56 rounded-full mx-auto mt-[-8rem]'/>
-        
-        <div className='relative mt-[-6rem] h-72 flex flex-col bg-sky-500 text-white text-2x1 items-center justify-center'>
-            <p>Nome: {usuario.nome}</p>
-            <p>Email: {usuario.usuario}</p>
+      <div className='container mx-auto mt-4 rounded-2xl overflow-hidden'>
+      <img src="https://i.imgur.com/ZZFAmzo.jpg" alt="Capa Do Perfil" className='w-full h-72 object-cover border-b-8 border-white' />
+        <img src={usuario.foto} alt={`Foto de perfil de ${usuario.nome}`} className='rounded-full w-56 mx-auto mt-[-8rem] border-8 border-white relative z-10' />
+        <div className="relative mt-[-6rem] h-72 flex flex-col bg-sky-500 text-white text-2xl items-center justify-center">
+          <p>Nome: {usuario.nome} </p>
+          <p>Email: {usuario.usuario}</p>
         </div>
-    </div>
+      </div>
   )
 }
 
