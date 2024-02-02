@@ -16,13 +16,13 @@ function Navbar() {
 
     function logout() {
         handleLogout()
-        ToastAlert('Usuário deslogado com sucesso',"sucesso")
+        ToastAlert('Usuário deslogado com sucesso', "sucesso")
         navigate('/login')
     }
 
     if (usuario.token !== "") {
         NavbarComponent = (
-            <div className='w-full bg-indigo-900 text-white flex justify-center py-4 p-1'>
+            <div className='w-full bg-sky-400 text-white flex justify-center py-4 p-1'>
                 <div className="container flex justify-between text-lg">
                     {nome.length === 0 ? (<Link to='/' className='text-2xl font-bold uppercase hover:underline'>Blog Pessoal</Link>) :
                         (<Link to='/home' className='text-2xl font-bold uppercase hover:underline'>Blog Pessoal</Link>)}
