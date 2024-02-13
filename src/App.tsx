@@ -30,14 +30,17 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/login" element={<Login />} />
+
               <Route path="/postagens" element={<ListaPostagens />} />
               <Route path="/cadastrarPostagem" element={<FormPostagem />} />
               <Route path="/editarPostagem/:id" element={<FormPostagem />} />
               <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
+
               <Route path="/temas" element={<ListaTemas />} />
               <Route path="/cadastrartema" element={<FormTema />} />
               <Route path="/editartema/:id" element={<FormTema />} />
               <Route path="/deletartema/:id" element={<DeletarTema />} />
+              
               <Route path="/perfil" element={<Perfil />} />
             </Routes>
           </div>

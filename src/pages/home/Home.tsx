@@ -20,8 +20,8 @@ function Home() {
 
     return (
         <>
-            <div className="h-3/6 grid grid-cols-3 content-start bg-blue-400">
-                <div className='w-2'></div>
+            <div className="h-3/6 grid grid-cols-3 content-start bg-gradient-to-t from-blue-400 to-sky-400">
+                <div className=''></div>
                 <div className='w-full'>
                     <Slider {...settings} className="">
                         <div className=''>
@@ -58,10 +58,9 @@ function Home() {
 
             </div>
 
-            <div className="bg-blue-400">
-                <div id="container" className="flex justify-center bg-blue-400">
-                    <div id="subcontainer" className=" container  grid  grid-cols-2  text-white
-                    ">
+            <div className="bg-gradient-to-b from-blue-400 to-sky-400">
+                <div id="container" className="flex justify-center ">
+                    <div id="subcontainer" className=" container  grid  grid-cols-2  text-sky-900">
                         <div id="texto" className="flex flex-col gap-4 items-center justify-center  py-4 ">
                             <h2 className=" text-5xl font-bold ">Seja Bem Vinde!</h2>
                             <p className="text-xl">Expresse aqui os seus pensamentos e opiniões</p>

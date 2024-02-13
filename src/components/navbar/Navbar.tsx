@@ -22,16 +22,16 @@ function Navbar() {
 
     if (usuario.token !== "") {
         NavbarComponent = (
-            <div className='w-full bg-sky-400 text-white flex justify-center py-4 p-1'>
+            <div className='w-full bg-gradient-to-t from-blue-400 to-sky-400 text-white flex justify-center py-4 p-4'>
                 <div className="container flex justify-between text-lg">
-                    {nome.length === 0 ? (<Link to='/' className='text-2xl font-bold uppercase hover:underline'>Blog Pessoal</Link>) :
-                        (<Link to='/home' className='text-2xl font-bold uppercase hover:underline'>Blog Pessoal</Link>)}
-                    <div className='flex gap-4'>
-                        <Link to='/postagens' className='hover:underline'>Postagens</Link>
-                        <Link to='/temas' className='hover:underline'>Temas</Link>
-                        <Link to='/cadastrartema' className='hover:underline'>Cadastrar Tema</Link>
-                        <Link to='/perfil' className='hover:underline'>Perfil</Link>
-                        <Link to='' onClick={logout} className='hover:underline'>Sair</Link>
+                    {nome.length === 0 ? (<Link to='/' className='text-2xl font-bold uppercase hover:underline '>Blog Pessoal</Link>) :
+                        (<Link to='/home' className='text-2xl font-bold uppercase hover:underline '>Blog Pessoal</Link>)}
+                    <div className='flex gap-4 text-white '>
+                        <Link to='/postagens' className='hover:underline px-2'>Postagens</Link>
+                        <Link to='/temas' className='hover:underline px-2'>Temas</Link>
+                        <Link to='/cadastrartema' className='hover:underline px-2'>Cadastrar Tema</Link>
+                        <Link to='/perfil' className='hover:underline px-2'>Perfil</Link>
+                        <Link to='' onClick={logout} className='hover:underline px-2'>Sair</Link>
 
                     </div>
                 </div>

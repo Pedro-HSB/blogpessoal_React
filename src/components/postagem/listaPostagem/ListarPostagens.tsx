@@ -30,7 +30,7 @@ function ListaPostagens() {
 
   useEffect(() => {
     if (token === '') {
-      ToastAlert('Você precisa estar logado',"info")
+      ToastAlert('Você precisa estar logado', "info")
       navigate('/login');
     }
   }, [token]);
@@ -50,12 +50,16 @@ function ListaPostagens() {
           wrapperClass="dna-wrapper mx-auto"
         />
       )}
-      <div className="container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {Postagens.map((Postagem) => (
-          <>
-            <CardPostagens key={Postagem.id} post={Postagem} />
-          </>
-        ))}
+      <div className="container mx-auto my-4 grid grid-cols-4 md:grid-cols-1 lg:grid-cols-4 gap-4  ">
+        <div></div>
+        <div className='col-span-2'>
+          {Postagens.map((Postagem) => (
+            <>
+              <CardPostagens key={Postagem.id} postagem={Postagem} />
+            </>
+          ))}
+        </div>
+        <div></div>
       </div>
     </>
   );
